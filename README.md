@@ -49,17 +49,6 @@ The dataset contains anonymized session-level data from the Google Merchandise S
 
 ---
 
-## 📊 Dataset Overview
-
-- **Dataset name:** `bigquery-public-data.google_analytics_sample.ga_sessions_*`
-- **Time period:** 2017
-- **Total sessions:** ~900,000+ rows
-- **Structure:** Partitioned by date (one table per day)
-
-This is a sample dataset designed for analytics practice and demonstration purposes.
-
----
-
 ## 🔎 Project Scope & Analytical Approach
 
 The analysis includes:
@@ -77,11 +66,42 @@ All transformations and aggregations were performed using:
 
 ---
 
-## 📌 How to Access the Dataset
+## 📂 Dataset Description & Data Structure
 
-1. Log in to your Google Cloud Platform account.
-2. Open the BigQuery Console.
-3. Click **“Add Data” → “Search a project.”**
-4. In the search bar, enter the project ID: bigquery-public-data.google_analytics_sample.ga_sessions and press Enter.
-5. Click on the ga_sessions_ table to explore its structure and data.
+### 📌 Data Source
+The sample data is from **Google Analytics (Universal Analytics)**, publicly available in BigQuery.  
+It contains session-level website activity data from the Google Merchandise Store e-commerce website.
+
+### 📌 Data Size
+
+- **Dataset:** `bigquery-public-data.google_analytics_sample`  
+- **Tables used:** `ga_sessions_2017*`  
+- **Time period:** 2017  
+- **Total sessions:** ~900,000+ rows  
+- **Structure:** One table per day (date-suffixed tables)
+
+### 📌 How to Access the Data
+
+1. Log in to your Google Cloud Platform account and create a new project.  
+2. Open the **BigQuery Console** and select your project.  
+3. Click on **“Add Data”** → **“Search a project.”**  
+4. In the search bar, enter:
+
+   ```
+   bigquery-public-data
+   ```
+
+5. Locate and open the dataset:
+
+   ```
+   google_analytics_sample
+   ```
+
+6. Click on the tables starting with:
+
+   ```
+   ga_sessions_2017*
+   ```
+
+to explore their structure and data.
 
