@@ -1,5 +1,4 @@
-# E-commerce Traffic-to-Transaction Analysis | SQL, BigQuery
-# 📊 E-Commerce Website Analytics Project (SQL – Google BigQuery)
+# 📊 E-Commerce Website Analytics Project | SQL, BigQuery
 
 **Author:** Van Bat Phuc Tai 
 **Tools:** SQL, Google BigQuery  
