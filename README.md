@@ -1,35 +1,34 @@
-# 📊 E-Commerce Website Analytics Project | SQL, BigQuery
+# 📊 E-Commerce Website Performance & Customer Behavior Analysis | SQL & Google BigQuery
 
-**Author:** Van Bat Phuc Tai 
-
+**Author:** Van Bat Phuc Tai  
 **Tools:** SQL, Google BigQuery  
 
 ---
 
 ## 📌 Background & Business Context
 
-In the highly competitive e-commerce landscape, understanding user behavior and website performance is critical to driving revenue growth.
+In today’s data-driven e-commerce environment, understanding how users interact with a website is essential for optimizing conversion rates and driving sustainable revenue growth.
 
-This project leverages SQL in Google BigQuery to analyze traffic trends, customer engagement, and purchasing behavior on an e-commerce website. The objective is to transform raw web analytics data into actionable business insights that support data-driven decision making.
+This project analyzes website performance and customer purchasing behavior using SQL in Google BigQuery. By transforming raw session-level analytics data into structured insights, the project aims to support data-informed decision-making across marketing, product, and business strategy functions.
 
 ---
 
 ## 🎯 Key Business Questions
 
-- How are traffic, engagement, and transactions trending over time?
-- Which traffic sources contribute most to revenue?
-- How does user behavior differ between purchasers and non-purchasers?
-- What does the customer journey look like from product view to completed purchase?
+- How do traffic, engagement, and transaction metrics evolve over time?  
+- Which acquisition channels contribute most effectively to revenue?  
+- What behavioral differences exist between purchasers and non-purchasers?  
+- How does the user journey progress from product view to completed transaction?  
 
 ---
 
 ## 👥 Target Audience
 
-This analysis is designed for:
+This analysis is relevant for:
 
 - Data Analysts & Business Analysts  
 - Digital Marketing Teams  
-- E-commerce Managers  
+- E-commerce & Growth Managers  
 - Business Intelligence & Strategy Teams  
 
 ---
@@ -38,14 +37,26 @@ This analysis is designed for:
 
 ### 📌 Data Source
 
-This project uses publicly available sample data from Google Analytics, exported to Google BigQuery.
+This project uses publicly available sample data from **Google Analytics (Universal Analytics)**, hosted in Google BigQuery.
 
-The dataset contains anonymized session-level data from the Google Merchandise Store, including:
+The dataset contains anonymized session-level activity from the Google Merchandise Store e-commerce website, including:
 
-- Website traffic metrics (sessions, pageviews, visits)
-- User engagement behavior
-- Transaction and revenue information
-- Traffic acquisition channels
+- Website traffic metrics (sessions, pageviews, visits)  
+- User engagement behavior  
+- Transaction and revenue data  
+- Traffic acquisition sources  
+
+---
+
+## 📊 Dataset Overview
+
+- **Dataset:** `bigquery-public-data.google_analytics_sample`  
+- **Tables used:** `ga_sessions_2017*`  
+- **Time period:** 2017  
+- **Total sessions:** ~900,000+ rows  
+- **Structure:** Date-partitioned tables (one table per day)
+
+> Note: This is a public sample dataset provided for analytics training and demonstration purposes.
 
 ---
 
@@ -54,54 +65,40 @@ The dataset contains anonymized session-level data from the Google Merchandise S
 The analysis includes:
 
 ✔️ Monthly traffic and transaction trend analysis  
-✔️ Revenue breakdown by traffic source (weekly & monthly view)  
+✔️ Revenue breakdown by traffic source (weekly & monthly)  
 ✔️ Behavioral comparison between purchasers and non-purchasers  
-✔️ Funnel exploration: product views → add to cart → purchase  
+✔️ Conversion funnel exploration: product view → add to cart → purchase  
+
+### 🛠 Technical Implementation
 
 All transformations and aggregations were performed using:
 
-- SQL Window Functions  
+- SQL aggregations and conditional logic  
 - Common Table Expressions (CTEs)  
-- Time-based grouping in BigQuery  
+- Window Functions  
+- Time-based grouping and date formatting in BigQuery  
 
 ---
 
-## 📂 Dataset Description & Data Structure
+## 📌 How to Access the Dataset
 
-### 📌 Data Source
-The sample data is from **Google Analytics (Universal Analytics)**, publicly available in BigQuery.  
-It contains session-level website activity data from the Google Merchandise Store e-commerce website.
-
-### 📌 Data Size
-
-- **Dataset:** `bigquery-public-data.google_analytics_sample`  
-- **Tables used:** `ga_sessions_2017*`  
-- **Time period:** 2017  
-- **Total sessions:** ~900,000+ rows  
-- **Structure:** One table per day (date-suffixed tables)
-
-### 📌 How to Access the Data
-
-1. Log in to your Google Cloud Platform account and create a new project.  
-2. Open the **BigQuery Console** and select your project.  
-3. Click on **“Add Data”** → **“Search a project.”**  
-4. In the search bar, enter:
+1. Log in to your Google Cloud Platform account and create a project.  
+2. Open the **BigQuery Console**.  
+3. Click **“Add Data” → “Search a project.”**  
+4. Enter:
 
    ```
    bigquery-public-data
    ```
 
-5. Locate and open the dataset:
+5. Navigate to the dataset:
 
    ```
    google_analytics_sample
    ```
 
-6. Click on the tables starting with:
+6. Explore the tables starting with:
 
    ```
    ga_sessions_2017*
    ```
-
-to explore their structure and data.
-
