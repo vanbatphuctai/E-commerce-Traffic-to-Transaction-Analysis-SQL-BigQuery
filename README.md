@@ -1,6 +1,7 @@
 # 📊 E-Commerce Website Analytics Project | SQL, BigQuery
 
 **Author:** Van Bat Phuc Tai 
+
 **Tools:** SQL, Google BigQuery  
 
 ---
