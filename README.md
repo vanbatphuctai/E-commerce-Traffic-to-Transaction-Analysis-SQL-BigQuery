@@ -1,4 +1,4 @@
-# 📊 E-Commerce Website Performance & Customer Behavior Analysis | SQL & Google BigQuery
+# 📊 E-Commerce Traffic-to-Transaction Analysis | SQL & Google BigQuery
 
 **Author:** Van Bat Phuc Tai  
 **Tools:** SQL, Google BigQuery  
