@@ -12,6 +12,8 @@
 - 👥 [Target Audience](#-target-audience)
 - 📂 [Dataset Description](#-dataset-description)
 - 📊 [Dataset Overview](#-dataset-overview)
+- 🔎 [Final Conclusion & Recommendations](#-final-conclusion--recommendations)
+
 
 ---
 
@@ -32,6 +34,7 @@ This project analyzes **website performance** and **customer purchasing behavior
 - 👥 Compare **purchaser vs. non-purchaser behavior** to uncover key behavioral drivers influencing conversion.
 
 - 🔄 Analyze the **end-to-end conversion funnel** (product view → add to cart → purchase) to detect drop-offs and optimization opportunities.
+
 
 ---
 
@@ -68,7 +71,7 @@ The dataset contains anonymized session-level activity from the Google Merchandi
 - **Time period:** 2017  
 - **Total sessions:** ~900,000+ rows  
 - **Structure:** Date-partitioned tables (one table per day)
-- 
+  
 ---
 
 ## 🔎 Project Scope & Analytical Approach
@@ -117,9 +120,10 @@ All transformations and aggregations were performed using:
 
 ## ⚒️ Main Process
 
----
 
 ## 🔍 Calculate total visit, pageview, transaction and revenue for January, February and March 2017 (order by month).
+
+This analysis measures **total visits, pageviews, transactions, and revenue** for **Jan–Mar 2017** to evaluate overall business performance. By organizing results **monthly**, it highlights **traffic growth, conversion efficiency, and revenue trends**, offering a concise snapshot of Q1 performance dynamics.
 
 ```sql
 SELECT 
@@ -132,4 +136,6 @@ WHERE _table_suffix BETWEEN '0101' AND '0331'
 GROUP BY month
 ORDER BY month ASC;
 ```
-   
+
+
+## 🔎 Final Conclusion & Recommendations
