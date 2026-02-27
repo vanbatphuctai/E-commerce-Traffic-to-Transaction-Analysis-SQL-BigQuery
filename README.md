@@ -125,6 +125,7 @@ All transformations and aggregations were performed using:
 
 This analysis measures **total visits, pageviews, transactions, and revenue** for **Jan–Mar 2017** to evaluate overall business performance. By organizing results **monthly**, it highlights **traffic growth, conversion efficiency, and revenue trends**, offering a concise snapshot of Q1 performance dynamics.
 
+### 🚀 Queries
 ```sql
 SELECT 
     FORMAT_DATE ('%Y-%m', PARSE_DATE('%Y%m%d',date)) as month,
@@ -136,6 +137,8 @@ WHERE _table_suffix BETWEEN '0101' AND '0331'
 GROUP BY month
 ORDER BY month ASC;
 ```
+### 💡 Queries result
+<img width="460" height="154" alt="image" src="https://github.com/user-attachments/assets/d1a2aa8e-8d45-4dba-9e55-43a4f30c07a2" />
 
 
 ## 🔎 Final Conclusion & Recommendations
