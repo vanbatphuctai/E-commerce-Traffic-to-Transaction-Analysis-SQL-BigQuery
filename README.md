@@ -5,20 +5,32 @@
 
 ---
 
+## 📑 Table of Contents
+
+- 📌 [Background & Overview](#background--business-context)
+- 📂 [Dataset Description](#dataset-description)
+- 📊 [Dataset Overview](data-overview)
+- 🔎 [Final Conclusion & Recommendations](#final-conclusion--recommendations)
+
+---
+
 ## 📌 Background & Business Context
 
-In today’s data-driven e-commerce environment, understanding how users interact with a website is essential for optimizing conversion rates and driving sustainable revenue growth.
+In today’s **data-driven e-commerce environment**, understanding how users interact with a website is essential for **optimizing conversion rates** and driving **sustainable revenue growth**.
 
-This project analyzes website performance and customer purchasing behavior using SQL in Google BigQuery. By transforming raw session-level analytics data into structured insights, the project aims to support data-informed decision-making across marketing, product, and business strategy functions.
+This project analyzes **website performance** and **customer purchasing behavior** using **SQL in Google BigQuery**. By transforming **raw session-level analytics data** into **structured insights**, the project supports **data-informed decision-making** across **marketing, product, and business strategy** functions.
 
 ---
 
 ## 🎯 Key Business Questions
 
-- How do traffic, engagement, and transaction metrics evolve over time?  
-- Which acquisition channels contribute most effectively to revenue?  
-- What behavioral differences exist between purchasers and non-purchasers?  
-- How does the user journey progress from product view to completed transaction?  
+- 📈 Evaluate how **traffic, engagement, and transaction trends** evolve over time to identify growth patterns and performance gaps.
+
+- 💰 Identify **high-performing acquisition channels** that drive the strongest revenue contribution and ROI.
+
+- 👥 Compare **purchaser vs. non-purchaser behavior** to uncover key behavioral drivers influencing conversion.
+
+- 🔄 Analyze the **end-to-end conversion funnel** (product view → add to cart → purchase) to detect drop-offs and optimization opportunities.
 
 ---
 
@@ -55,9 +67,7 @@ The dataset contains anonymized session-level activity from the Google Merchandi
 - **Time period:** 2017  
 - **Total sessions:** ~900,000+ rows  
 - **Structure:** Date-partitioned tables (one table per day)
-
-> Note: This is a public sample dataset provided for analytics training and demonstration purposes.
-
+- 
 ---
 
 ## 🔎 Project Scope & Analytical Approach
@@ -102,3 +112,23 @@ All transformations and aggregations were performed using:
    ```
    ga_sessions_2017*
    ```
+---
+
+## ⚒️ Main Process
+
+---
+
+## 🔍 Calculate total visit, pageview, transaction and revenue for January, February and March 2017 (order by month).
+
+```sql
+SELECT 
+    FORMAT_DATE ('%Y-%m', PARSE_DATE('%Y%m%d',date)) as month,
+    SUM(totals.visits) AS visits,
+    SUM(totals.pageviews) AS pageviews,
+    SUM(totals.transactions) AS transactions
+FROM `bigquery-public-data.google_analytics_sample.ga_sessions_2017*`
+WHERE _table_suffix BETWEEN '0101' AND '0331'
+GROUP BY month
+ORDER BY month ASC;
+```
+   
