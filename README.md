@@ -125,7 +125,7 @@ All transformations and aggregations were performed using:
 
 This analysis measures **total visits, pageviews, transactions, and revenue** for **Jan–Mar 2017** to evaluate overall business performance. By organizing results **monthly**, it highlights **traffic growth, conversion efficiency, and revenue trends**, offering a concise snapshot of Q1 performance dynamics.
 
-### 🚀 Queries
+#### 🚀 **Queries**
 ```sql
 SELECT 
     FORMAT_DATE ('%Y-%m', PARSE_DATE('%Y%m%d',date)) as month,
@@ -137,8 +137,70 @@ WHERE _table_suffix BETWEEN '0101' AND '0331'
 GROUP BY month
 ORDER BY month ASC;
 ```
-### 💡 Queries result
+#### 💡 Queries result
 <img width="900" alt="image" src="https://github.com/user-attachments/assets/a7fa1c30-3509-46bc-9ff3-29599c9c041c" />
+
+
+## 🔍 Calculate bounce rate traffic source in July 2017.
+
+The goal of this analysis is to **calculate the bounce rate by traffic source in July 2017** and compare performance across acquisition channels. The findings help identify **which sources drive stronger engagement** and uncover **optimization opportunities to improve user retention and overall website performance**.
+
+#### 🚀 **Queries**
+```sql
+SELECT 
+  trafficSource.source AS source,
+  SUM(totals.visits) AS total_visit,
+  SUM(totals.bounces) AS total_no_of_bounce,
+  ROUND((SUM(totals.bounces) / SUM(totals.visits)) * 100, 3) AS bounce_rate
+FROM `bigquery-public-data.google_analytics_sample.ga_sessions_201707*`
+GROUP BY source
+ORDER BY total_visit DESC;
+```
+#### 💡 Queries result
+<img width="900" alt="image" src="https://github.com/user-attachments/assets/8175e1a4-d28d-445e-9030-01287039f4d9" />
+
+
+## 🔍 Calculate revenue by traffic source by week, by month in June 2017
+
+This analysis aims to **evaluate revenue performance by traffic source in June 2017**, with breakdowns at both **weekly and monthly levels**. By examining revenue trends over time, the study identifies **the most profitable acquisition channels**, enabling more targeted marketing decisions and revenue optimization strategies.
+
+#### 🚀 **Queries**
+```sql
+WITH month_type AS (
+  SELECT 
+    FORMAT_DATE('%Y%m', PARSE_DATE('%Y%m%d', date)) AS time,
+    trafficSource.source AS source,
+    ROUND(SUM(products.productRevenue) / 1000000, 4) AS revenue,
+    'Month' AS time_type
+  FROM `bigquery-public-data.google_analytics_sample.ga_sessions_201706*`, 
+  UNNEST(hits) AS hits,
+  UNNEST(hits.product) AS products
+  WHERE products.productRevenue IS NOT NULL
+  GROUP BY source, time
+),
+week_type AS (
+  SELECT 
+    FORMAT_DATE('%Y%W', PARSE_DATE('%Y%m%d', date)) AS time,
+    trafficSource.source AS source,
+    ROUND(SUM(products.productRevenue) / 1000000, 4) AS revenue,
+    'Week' AS time_type
+  FROM `bigquery-public-data.google_analytics_sample.ga_sessions_201706*`, 
+  UNNEST(hits) AS hits,
+  UNNEST(hits.product) AS products
+  WHERE products.productRevenue IS NOT NULL
+  GROUP BY source, time
+)
+SELECT time_type, time, source, revenue
+FROM month_type
+UNION ALL
+SELECT time_type, time, source, revenue
+FROM week_type
+ORDER BY revenue DESC;
+```
+#### 💡 Queries result
+<img width="900" alt="image" src="https://github.com/user-attachments/assets/e09939b4-db3a-4b7c-b630-4acce89393be" />
+
+
 
 
 ## 🔎 Final Conclusion & Recommendations
