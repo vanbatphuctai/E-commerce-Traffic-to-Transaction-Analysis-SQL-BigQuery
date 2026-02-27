@@ -7,10 +7,11 @@
 
 ## 📑 Table of Contents
 
-- 📌 [Background & Overview](#background--business-context)
-- 📂 [Dataset Description](#dataset-description)
-- 📊 [Dataset Overview](data-overview)
-- 🔎 [Final Conclusion & Recommendations](#final-conclusion--recommendations)
+- 📌 [Background & Business Context](#-background--business-context)
+- 🎯 [Key Business Questions](#-key-business-questions)
+- 👥 [Target Audience](#-target-audience)
+- 📂 [Dataset Description](#-dataset-description)
+- 📊 [Dataset Overview](#-dataset-overview)
 
 ---
 
