@@ -121,11 +121,11 @@ All transformations and aggregations were performed using:
 ## ⚒️ Main Process
 
 
-## 🔍 Calculate total visit, pageview, transaction and revenue for January, February and March 2017 (order by month).
+### 🔍 Calculate total visit, pageview, transaction and revenue for January, February and March 2017 (order by month).
 
 This analysis measures **total visits, pageviews, transactions, and revenue** for **Jan–Mar 2017** to evaluate overall business performance. By organizing results **monthly**, it highlights **traffic growth, conversion efficiency, and revenue trends**, offering a concise snapshot of Q1 performance dynamics.
 
-## 🚀 Queries
+### 🚀 Queries
 ```sql
 SELECT 
     FORMAT_DATE ('%Y-%m', PARSE_DATE('%Y%m%d',date)) as month,
@@ -138,6 +138,7 @@ GROUP BY month
 ORDER BY month ASC;
 ```
 ### 💡 Queries result
-<img width="900" alt="image" src="https://github.com/user-attachments/assets/d1a2aa8e-8d45-4dba-9e55-43a4f30c07a2" />
+<img width="900" alt="image" src="https://github.com/user-attachments/assets/a7fa1c30-3509-46bc-9ff3-29599c9c041c" />
+
 
 ## 🔎 Final Conclusion & Recommendations
