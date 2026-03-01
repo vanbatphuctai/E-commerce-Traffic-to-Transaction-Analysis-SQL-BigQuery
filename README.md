@@ -201,9 +201,9 @@ ORDER BY revenue DESC;
 <img width="900" alt="image" src="https://github.com/user-attachments/assets/e09939b4-db3a-4b7c-b630-4acce89393be" />
 
 
-## 🔍 Calculate average number of pageviews by purchaser type
+## 🔍 Calculate average number of pageviews by purchaser type (purchasers vs non-purchasers) in June, July 2017.
 
-**Analyze the average number of pageviews by purchaser segment** to compare behavioral differences between **purchasers vs. non-purchasers**, uncovering insights into **engagement levels** and **buying patterns**.
+Calculate the **average number of pageviews** segmented by **purchaser type (purchasers vs. non-purchasers)** for **June and July 2017** to evaluate **engagement differences** and identify variations in **browsing behavior** between **buying and non-buying users**.
 
 #### 🚀 **Queries**
 ```sql
