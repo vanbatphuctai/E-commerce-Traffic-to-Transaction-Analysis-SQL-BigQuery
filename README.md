@@ -383,7 +383,7 @@ ORDER BY pv.month;
 
 ```
 #### 💡 Queries result
-<img width="900" alt="image"src="https://github.com/user-attachments/assets/a245fc1f-0d2e-4c1e-90db-b88d04284ce2" />
+<img width="900" alt="image" src="https://github.com/user-attachments/assets/a245fc1f-0d2e-4c1e-90db-b88d04284ce2" />
 
 
 ## 🔎 Final Conclusion & Recommendations
