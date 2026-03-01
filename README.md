@@ -388,17 +388,16 @@ ORDER BY pv.month;
 
 ## 🔎 Final Conclusion & Recommendations
 
-## 📌 Key Insights
+## 📌 Insights
 
-- **Traffic Trend:** Website traffic remained stable throughout Q1 2017, with March recording the highest volume (69,931 visits).
-- **Revenue by Source:** Direct traffic was the leading revenue contributor in June 2017, followed by strong performance from Google and Mail channels.
-- **Bounce Rate:** Referral sources such as phandroid.com showed a high bounce rate (77.78%), indicating low landing page engagement.
-- **Purchasing Behavior:** Customers who purchased *"YouTube Men's Vintage Henley"* also bought related apparel items, highlighting cross-selling potential.
-
+- **Traffic Trends:** Total visits in **January, February, and March 2017** remained stable, with **March recording the highest traffic (69,931 visits)**.
+- **Revenue by Source:** **Direct traffic** was the strongest revenue driver in **June 2017**, followed by significant contributions from **Google** and **Mail**, highlighting high-performing acquisition channels.
+- **Bounce Rate Insights:** Traffic from **phandroid.com** shows a **high bounce rate (77.78%)**, indicating low engagement and potential landing page optimization issues.
+- **Purchaser Behavior:** Customers who purchased **"YouTube Men's Vintage Henley"** also showed strong interest in related items such as **Google Men's Vintage Badge Tee Black**, revealing a clear **cross-selling opportunity**.
 
 ## 📌 Recommendations
 
-- **Optimize High-Bounce Landing Pages:** Improve content relevance, user experience, and page load speed for underperforming referral traffic.
-- **Scale High-Performing Channels:** Increase investment in Direct and Google acquisition channels to maximize revenue growth.
-- **Improve Conversion Rate:** Simplify the checkout process and apply targeted promotions to convert high-intent users.
-- **Leverage Cross-Selling:** Implement personalized product recommendations to increase average order value (AOV) and customer lifetime value (CLV).
+- **Optimize High-Bounce Landing Pages:** Improve content relevance, UX, and page load speed for traffic sources like **phandroid.com** to reduce bounce rates.
+- **Leverage High-Performing Channels:** Increase investment in **Direct and Google traffic**, including paid campaigns, to maximize conversions.
+- **Convert High-Intent Non-Purchasers:** Streamline the checkout process and deploy targeted promotions to convert users with **high pageviews but no transactions**.
+- **Strengthen Cross-Selling Strategy:** Implement smart product recommendations for items like **"YouTube Men's Vintage Henley"** to boost **average order value (AOV)**.
