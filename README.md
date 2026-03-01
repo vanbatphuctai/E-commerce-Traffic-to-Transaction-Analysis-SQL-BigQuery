@@ -201,6 +201,204 @@ ORDER BY revenue DESC;
 <img width="900" alt="image" src="https://github.com/user-attachments/assets/e09939b4-db3a-4b7c-b630-4acce89393be" />
 
 
+## 🔍 Calculate average number of pageviews by purchaser type
+
+**Analyze the average number of pageviews by purchaser segment** to compare behavioral differences between **purchasers vs. non-purchasers**, uncovering insights into **engagement levels** and **buying patterns**.
+
+#### 🚀 **Queries**
+```sql
+WITH 
+purchaser_data AS (
+  SELECT
+      FORMAT_DATE("%Y%m", PARSE_DATE("%Y%m%d", date)) AS month,
+      SUM(totals.pageviews) / COUNT(DISTINCT fullvisitorid) AS avg_pageviews_purchase
+  FROM `bigquery-public-data.google_analytics_sample.ga_sessions_2017*`,
+    UNNEST(hits) hits,
+    UNNEST(product) product
+  WHERE _table_suffix BETWEEN '0601' AND '0731'
+    AND totals.transactions >= 1
+    AND product.productRevenue IS NOT NULL
+  GROUP BY month
+),
+non_purchaser_data AS (
+  SELECT
+      FORMAT_DATE("%Y%m", PARSE_DATE("%Y%m%d", date)) AS month,
+      SUM(totals.pageviews) / COUNT(DISTINCT fullvisitorid) AS avg_pageviews_non_purchase
+  FROM `bigquery-public-data.google_analytics_sample.ga_sessions_2017*`,
+    UNNEST(hits) hits,
+    UNNEST(product) product
+  WHERE _table_suffix BETWEEN '0601' AND '0731'
+    AND totals.transactions IS NULL
+    AND product.productRevenue IS NULL
+  GROUP BY month
+)
+SELECT
+    pd.*,
+    avg_pageviews_non_purchase
+FROM purchaser_data pd
+FULL JOIN non_purchaser_data USING(month)
+ORDER BY pd.month;
+```
+#### 💡 Queries result
+<img width="900" alt="image" src="https://github.com/user-attachments/assets/ff5fb846-de6e-4fdc-b57f-f1441c6b6a00" />
+
+
+## 🔍 Calculate average number of transactions per user that made a purchase in July 2017
+
+**Calculate the average number of transactions per purchasing user in July 2017** to examine buying frequency and repeat purchase behavior. This analysis provides a clearer view of **customer loyalty** and highlights opportunities to improve **retention strategies**.
+
+#### 🚀 **Queries**
+```sql
+SELECT
+    FORMAT_DATE("%Y%m", PARSE_DATE("%Y%m%d", date)) AS month,
+    SUM(totals.transactions) / COUNT(DISTINCT fullvisitorid) AS Avg_total_transactions_per_user
+FROM `bigquery-public-data.google_analytics_sample.ga_sessions_201707*`,
+    UNNEST(hits) hits,
+    UNNEST(product) product
+WHERE totals.transactions >= 1
+AND product.productRevenue IS NOT NULL
+GROUP BY month;
+```
+#### 💡 Queries result
+<img width="900" alt="image" src="https://github.com/user-attachments/assets/2cc69893-fad1-4a92-aea2-a3128d764551" />
+
+
+## 🔍 Calculate average amount of money spent per session. Only include purchaser data in July 2017
+
+**Determine the average revenue per session among purchasers in July 2017**, focusing specifically on completed purchases. This evaluation reveals **customer spending behavior**, supports assessment of **marketing effectiveness**, and helps identify **high-value customer segments**.
+
+#### 🚀 **Queries**
+```sql
+SELECT
+    FORMAT_DATE("%Y%m", PARSE_DATE("%Y%m%d", date)) AS month,
+    ((SUM(product.productRevenue)/SUM(totals.visits))/POWER(10,6)) AS avg_revenue_by_user_per_visit
+FROM `bigquery-public-data.google_analytics_sample.ga_sessions_201707*`,
+    UNNEST(hits) hits,
+    UNNEST(product) product
+WHERE product.productRevenue IS NOT NULL
+AND totals.transactions >= 1
+GROUP BY month;
+```
+#### 💡 Queries result
+<img width="900" alt="image" src="https://github.com/user-attachments/assets/50942eb2-6a50-4c83-9053-1d3064814059" />
+
+
+## 🔍 Other products purchased by customers who purchased product "YouTube Men's Vintage Henley" in July 2017. Output should show product name and the quantity was ordered.
+
+**Identify additional products purchased by customers who bought "YouTube Men's Vintage Henley" in July 2017.**  
+The output should include the **product name** and **quantity ordered**, providing insights into **cross-selling opportunities** and **customer preferences**.
+
+#### 🚀 **Queries**
+```sql
+WITH filtered_users AS (
+    SELECT
+        fullVisitorId
+    FROM `bigquery-public-data.google_analytics_sample.ga_sessions_201707*`,
+         UNNEST(hits) AS hits,
+         UNNEST(hits.product) AS product
+    WHERE product.v2ProductName = "YouTube Men's Vintage Henley"
+      AND product.productRevenue IS NOT NULL
+    GROUP BY fullVisitorId
+)
+
+SELECT
+    product.v2ProductName AS other_purchased_product,
+    SUM(product.productQuantity) AS total_quantity_purchased
+FROM `bigquery-public-data.google_analytics_sample.ga_sessions_201707*`,
+     UNNEST(hits) AS hits,
+     UNNEST(hits.product) AS product
+WHERE fullVisitorId IN (SELECT fullVisitorId FROM filtered_users)
+  AND product.productRevenue IS NOT NULL
+  AND totals.transactions >= 1
+  AND product.v2ProductName <> "YouTube Men's Vintage Henley"
+GROUP BY other_purchased_product
+ORDER BY total_quantity_purchased DESC;
+```
+#### 💡 Queries result
+<img width="900" alt="image" src="https://github.com/user-attachments/assets/a6e6054d-a75b-49b4-ab26-b55440ab06f5" />
+
+
+## 🔍 Calculate cohort map from product view to addtocart to purchase in Jan, Feb and March 2017.
+
+**Build a cohort map tracking the customer journey from product view → add-to-cart → purchase** for January, February, and March 2017. This analysis evaluates **conversion rates at each funnel stage**, identifies **drop-off points**, and uncovers opportunities to optimize the **sales process**.
+
+#### 🚀 **Queries**
+```sql
+WITH product_view AS (
+    -- Step 1: Count product detail views
+    SELECT
+        FORMAT_DATE("%Y%m", PARSE_DATE("%Y%m%d", date)) AS month,
+        COUNT(product.productSKU) AS num_product_views
+    FROM `bigquery-public-data.google_analytics_sample.ga_sessions_*`,
+         UNNEST(hits) AS hits,
+         UNNEST(hits.product) AS product
+    WHERE _TABLE_SUFFIX BETWEEN '20170101' AND '20170331'
+      AND hits.eCommerceAction.action_type = '2'  -- Product view
+    GROUP BY month
+),
+
+add_to_cart AS (
+    -- Step 2: Count add-to-cart actions
+    SELECT
+        FORMAT_DATE("%Y%m", PARSE_DATE("%Y%m%d", date)) AS month,
+        COUNT(product.productSKU) AS num_add_to_cart
+    FROM `bigquery-public-data.google_analytics_sample.ga_sessions_*`,
+         UNNEST(hits) AS hits,
+         UNNEST(hits.product) AS product
+    WHERE _TABLE_SUFFIX BETWEEN '20170101' AND '20170331'
+      AND hits.eCommerceAction.action_type = '3'  -- Add to cart
+    GROUP BY month
+),
+
+purchase AS (
+    -- Step 3: Count completed purchases
+    SELECT
+        FORMAT_DATE("%Y%m", PARSE_DATE("%Y%m%d", date)) AS month,
+        COUNT(product.productSKU) AS num_purchase
+    FROM `bigquery-public-data.google_analytics_sample.ga_sessions_*`,
+         UNNEST(hits) AS hits,
+         UNNEST(hits.product) AS product
+    WHERE _TABLE_SUFFIX BETWEEN '20170101' AND '20170331'
+      AND hits.eCommerceAction.action_type = '6'  -- Purchase
+      AND product.productRevenue IS NOT NULL
+    GROUP BY month
+)
+
+-- Step 4: Combine funnel stages & calculate conversion rates
+SELECT
+    pv.month,
+    pv.num_product_views,
+    a.num_add_to_cart,
+    p.num_purchase,
+
+    ROUND(a.num_add_to_cart * 100 / pv.num_product_views, 2) AS add_to_cart_rate_pct,
+    ROUND(p.num_purchase * 100 / pv.num_product_views, 2) AS purchase_rate_pct
+
+FROM product_view pv
+LEFT JOIN add_to_cart a 
+       ON pv.month = a.month
+LEFT JOIN purchase p 
+       ON pv.month = p.month
+ORDER BY pv.month;
+
+```
+#### 💡 Queries result
+<img width="900" alt="image"src="https://github.com/user-attachments/assets/a245fc1f-0d2e-4c1e-90db-b88d04284ce2" />
 
 
 ## 🔎 Final Conclusion & Recommendations
+
+## 📌 Key Insights
+
+- **Traffic Trend:** Website traffic remained stable throughout Q1 2017, with March recording the highest volume (69,931 visits).
+- **Revenue by Source:** Direct traffic was the leading revenue contributor in June 2017, followed by strong performance from Google and Mail channels.
+- **Bounce Rate:** Referral sources such as phandroid.com showed a high bounce rate (77.78%), indicating low landing page engagement.
+- **Purchasing Behavior:** Customers who purchased *"YouTube Men's Vintage Henley"* also bought related apparel items, highlighting cross-selling potential.
+
+
+## 📌 Recommendations
+
+- **Optimize High-Bounce Landing Pages:** Improve content relevance, user experience, and page load speed for underperforming referral traffic.
+- **Scale High-Performing Channels:** Increase investment in Direct and Google acquisition channels to maximize revenue growth.
+- **Improve Conversion Rate:** Simplify the checkout process and apply targeted promotions to convert high-intent users.
+- **Leverage Cross-Selling:** Implement personalized product recommendations to increase average order value (AOV) and customer lifetime value (CLV).
