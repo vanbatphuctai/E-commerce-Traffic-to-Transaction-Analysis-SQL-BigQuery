@@ -181,21 +181,20 @@ The dataset consists of three relational tables:
 
 ### 🚀 STAGE 2: NORTHSTAR METRICS & DEFINE POV
 
-### NORTHSTAR METRICS
+## NORTHSTAR METRICS
 
-|                          | **NORTH STAR 1** | **NORTH STAR 2 (Optional)** |
+|                          | **NORTHSTAR 1** | **NORTHSTAR 2 (Optional)** |
 |--------------------------|------------------|-----------------------------|
-| **What VALUE do you want to measure?** | Company Profit | Company Revenue |
-| **WHEN does the value indicate DELIVERY SUCCESS?** | If profit meets or exceeds the annual/quarterly plan + successful delivery. If it is lower, insights must be analyzed and adjustments made. | Meets or exceeds the set revenue target. |
-| **Northstar Metric Name** | Profit | Revenue |
-| **WHY do you choose this metric?** | - It is a realistic metric: high revenue doesn’t mean much if costs are also high. <br> - Profit shows whether the company is running efficiently. <br> - Helps senior managers identify which markets or product lines bring more profit, guiding investment priorities. | - Directly aligns with the goal of market expansion. <br> - Revenue represents cash inflow — good revenue means the market is accepting the company’s products/services. |
+| **What VALUE do you want to measure?** | Revenue Growth Rate | Profit (Profit Margin) |
+| **WHEN does the value indicate DELIVERY SUCCESS?** | - Increase order volume <br> - Increase number of customers <br> - Increase customer spending per order <br> - Improve sales team performance <br> - Expand market coverage <br> - Optimize conversion rate <br> - Increase Customer Lifetime Value (CLV) <br> - Implement threshold-based promotions <br> - Reduce return and complaint rates | - Achieve high profit margins <br> - Maintain effective cost control <br> - Set competitive yet profitable pricing <br> - Increase Average Order Value (AOV) <br> - Improve conversion rate <br> - Focus on high-margin products |
+| **Northstar Metric Name** | Revenue Growth Rate | Profit Margin |
+| **WHY do you choose this metric?** | Revenue Growth Rate reflects overall business performance, market penetration, and sustainable growth through customer acquisition, increased spending, and operational scalability. | Profit Margin reflects true operational efficiency by measuring value creation and cost control, ensuring sustainable net profitability across products and markets. |
 
 ### DEFINE POINT OF VIEW
 
-| Dimension | Group 1 | Group 2 | Group 3 | Group 4 |
-|------------|----------|----------|----------|----------|
-| Brainstorming Point of View | Overall (Timing) | Market | Product | Customer |
-|  | Sales Channel | Marketing |  |  |
+| Dimension | View 1 | View 2 | View 3 | View 4 | View 5 | View 6 |
+|------------|----------|----------|----------|----------|----------|----------|
+| Brainstorming Point of View | Overall (Timing) | Market | Product | Customer | Sales Agent | Marketing |
 
 ### DEFINE KEY BUSINESS VIEWS
 
@@ -236,7 +235,7 @@ Based on the Growth Formula breakdown of each view, brainstorm related dimension
 
 | Metric 5 | Metric 6 | Metric 7 | Metric 8 |
 |----------|----------|----------|----------|
-| Total Orders | AOV | Return Rate | Revenue Growth % |
+| Total Orders | AOV | Return Rate | |
 
 ---
 
@@ -244,9 +243,9 @@ Based on the Growth Formula breakdown of each view, brainstorm related dimension
 
 | Idea Name | Layer 0 Dimension (Overall KPIs) | Layer 1 Dimension (1D Breakdown) | Layer 2 Dimension (2D Breakdown) | Anything Important Missed? |
 |------------|----------------------------------|-----------------------------------|-----------------------------------|----------------------------|
-| **Layer 0: Business Objective / North Star / Scorecard** | - Total Sales <br> - Total Profit <br> - Profit Margin <br> - Total Orders <br> - Return Rate <br> - Revenue Growth % | Top Market | Top Product | 2 Key Metrics: Total Revenue & Total Profit |
-| **Layer 1: 1-Dimensional Breakdown (e.g., by time)** | - Revenue trend by market/product (Year) <br> - Revenue by market (total sales, total profit, profit margin) <br> - Revenue by category (total sales, total profit, profit margin) <br> - Profit by market/category <br> - Return Rate by market/category <br> - Total Sales vs Sales LY <br> - Revenue YoY by Market/Product | - Total Sales vs Sales LY (%) by market <br> - YoY growth by market | - Revenue Growth Rate by Product (%) | - Sales Agent Performance <br> - Revenue Growth Rate by Sales Agent |
-| **Layer 2: 2-Dimensional Breakdown (deeper analysis)** |  | - Top Sales (Market) <br> - Total Sales, Sales LY, YoY % Growth <br> - Total Profit, Profit Margin, Total Orders, Return Rate (by Region, Country, City) | - Top Selling Product by Total Sales <br> - Breakdown by Category/Sub-category <br> - Sales, Sales LY, YoY Growth, Total Profit, Profit Margin, Total Orders | - Detailed breakdown by Region & Sales Agent <br> - 4 Scorecards: Revenue, Profit Margin, Profit, YoY Growth Rate |
+| **Layer 0: Business Objective / NorthStar / Scorecard** | - Total Sales <br> - Total Profit <br> - Profit Margin <br> - Total Orders <br> - Return Rate <br> - Revenue Growth % | Top Market | Top Product | 2 Key Metrics: Total Revenue & Total Profit | x |
+| **Layer 1: 1-Dimensional Breakdown (e.g., by time)** | - Revenue trend by market/product (Year) <br> - Revenue by market (total sales, total profit, profit margin) <br> - Revenue by category (total sales, total profit, profit margin) <br> - Profit by market/category <br> - Return Rate by market/category <br> - Total Sales vs Sales LY <br> - Revenue YoY by Market/Product | - Total Sales vs Sales LY (%) by market <br> - YoY growth by market | - Revenue Growth Rate by Product (%) | - Sales Agent Performance <br> - Revenue Growth Rate by Sales Agent |  x |
+| **Layer 2: 2-Dimensional Breakdown (deeper analysis)** |  | - Top Sales (Market) <br> - Total Sales, Sales LY, YoY % Growth <br> - Total Profit, Profit Margin, Total Orders, Return Rate (by Region, Country, City) | - Top Selling Product by Total Sales <br> - Breakdown by Category/Sub-category <br> - Sales, Sales LY, YoY Growth, Total Profit, Profit Margin, Total Orders | - Detailed breakdown by Region & Sales Agent <br> - 4 Scorecards: Revenue, Profit Margin, Profit, YoY Growth Rate |  x |
 
 ### STAGE 3: IDEATE – STRUCTURE IDEA
 
@@ -277,49 +276,37 @@ This phase is implemented and validated directly within the interactive dashboar
 
 <img width="1000" alt="image" src="https://github.com/user-attachments/assets/e2a4dc9f-2b61-44d2-804d-329b18d7def9" />
 
-# 📌 Key Findings:
+### 📌 Key Findings:
 
-## 1. Total Revenue, Total Profit & Profit Margin  
+### 1. Total Revenue, Total Profit & Profit Margin  
 Revenue reached **$12.64M (+51.5%)** and Profit hit **$1.47M (+52.3%)**, with Orders up **+51.7%**.  
 → Growth was strongly **volume-driven**, while margin slightly improved to **11.61%**.
 
----
-
-## 2. Business Performance Overview by Year  
+### 2. Business Performance Overview by Year  
 Revenue & profit increased consistently (2011–2014).  
 Profit margin peaked at **~11.95% (2013)** and remained stable.  
 → Indicates **sustainable scaling with controlled profitability**.
 
----
-
-## 3. Business Performance Overview by Market  
+### 3. Business Performance Overview by Market  
 **APAC & EU** led total revenue.  
 **Canada achieved the highest margin (~26.6%)** despite low revenue share.  
 → Large markets drive scale; **Canada shows strongest profitability potential**.
 
----
-
-## 4. Business Performance Overview by Category  
+### 4. Business Performance Overview by Category  
 **Technology generated the highest revenue & strong margin (~14%)**.  
 **Furniture recorded the lowest margin (~7%)**.  
 → Technology is the **core profit driver**.
 
----
-
-## 5. Trends in Order & Return Rate  
+### 5. Trends in Order & Return Rate  
 Orders grew steadily, while **Return Rate declined after 2012 (~4.6%)**.  
 → Growth occurred **without increasing operational risk**.
 
----
-
-## 6. Revenue Growth by Market/Category (YoY%)  
+### 6. Revenue Growth by Market/Category (YoY%)  
 **EMEA (~59.8%) & Africa (~56.5%) showed the highest growth**.  
 US grew slower (~47%) but remains a core base market.  
 → **Emerging markets are accelerating fastest**.
 
----
-
-## 7. Orders, Customers & Return Rate by Category  
+### 7. Orders, Customers & Return Rate by Category  
 **Office Supplies led order volume**.  
 Return rates remained stable (~5–6%).  
 → Volume growth is **healthy and controlled**.
@@ -329,91 +316,73 @@ Return rates remained stable (~5–6%).
 
 <img width="1000" alt="image" src="https://github.com/user-attachments/assets/552a57e8-c730-4812-aeb9-58f0556448d1" />
 
-# 📌 Key Findings:
-## 1. Revenue & Profit Distribution
+### 📌 Key Findings:
+
+### 1. Revenue & Profit Distribution
 
 Total Revenue reached **$12.64M** and Total Profit **$1.47M**.
 **APAC ($3.6M), EU ($2.9M), and US ($2.3M)** led revenue contribution.
 → **Canada recorded the highest profit margin (~26.6%)** despite minimal revenue, while **EMEA showed the weakest margin (~5.5%)**.
 
-
-## 2. Revenue vs. Revenue LY (%YoY)
+### 2. Revenue vs. Revenue LY (%YoY)
 
 APAC (~$3.6M), EU (~$2.9M), and US (~$2.3M) led total revenue.  
 **EMEA (+59.8%) and Africa (+56.5%) recorded the highest YoY growth**, while US showed the lowest growth (~46.9%).  
 → Emerging markets are expanding faster, while large markets remain stable revenue pillars.
 
----
-
-## 3. Revenue, Profit Margin & Total Orders by Market
+### 3. Revenue, Profit Margin & Total Orders by Market
 
 **APAC and EU combine high revenue with solid margins (~12–13%)**.  
 **Canada achieved the highest profit margin (~26.6%)** despite very low revenue.  
 EMEA had the weakest margin (~5.5%).  
 → Clear contrast between scale markets (APAC/EU) and high-efficiency niche market (Canada).
 
----
-
-## 4. Top 5 Salesperson Revenue Rankings
+### 4. Top 5 Salesperson Revenue Rankings
 
 Top performer generated **~$2.82M**, significantly higher than others (~$0.88M–$1.60M).  
 Revenue contribution is partially concentrated among top reps.  
 → Performance gap suggests opportunity for sales capability optimization.
 
----
-
-## 5. Sales Metrics Overview by Dimension (Market View)
+### 5. Sales Metrics Overview by Dimension (Market View)
 
 APAC led in **Revenue (~$3.6M), Profit (~$436K), and Orders (5,437)**.  
 EU and US followed as core contributors.  
 Canada delivered **exceptional margin but lowest total orders (~201)**.  
 → Business performance varies clearly between volume-driven and margin-driven markets.
 
-
-
 ### III. Product Analysis
-
 
 <img width="1000" alt="image" src="https://github.com/user-attachments/assets/a1975264-8e9c-4e8b-925d-0b22e2e59c86" />
 
+### 📌 Key Findings:
 
-# 📌 Key Findings:
-
-## 1. Revenue vs. Revenue LY & %YoY by Category  
+### 1. Revenue vs. Revenue LY & %YoY by Category  
 
 Technology generated the highest revenue (~$4.8M) and maintained strong YoY growth (~51–52%).  
 Office Supplies showed the highest YoY growth (~52.6%), while Furniture grew slower (~50.4%).  
 
 → Technology remains the core revenue engine, with all categories sustaining >50% growth.
 
----
-
-## 2. Total Orders, Total Profit & Revenue by Sub-Category  
+### 2. Total Orders, Total Profit & Revenue by Sub-Category  
 
 Sub-categories with high orders and strong profit cluster in the upper-right quadrant (e.g., Copiers, Phones).  
 Some sub-categories show high order volume but lower profit contribution, indicating margin pressure.  
 
 → Clear gap between volume-driven and profit-efficient sub-categories.
 
----
-
-## 3. Impact of Shipping Mode on Return Volume  
+### 3. Impact of Shipping Mode on Return Volume  
 
 **Standard Class recorded the highest return volume (677 returns)** but maintained a moderate return rate (~4.47%).  
 First Class and Same Day showed slightly higher return rates (~5%).  
 
 → Faster shipping does not significantly reduce return risk; volume drives total returns.
 
----
-
-## 4. Sales Metrics Overview (Revenue / Profit / Return Rate by Sub-Category & Region)  
+### 4. Sales Metrics Overview (Revenue / Profit / Return Rate by Sub-Category & Region)  
 
 Binders, Furnishings, and Art show strong revenue concentration in US and EU markets.  
 Revenue distribution varies significantly across regions, with US contributing the largest share in most sub-categories.  
 
 → Performance heavily depends on geographic demand concentration.
-
----
 
 ## 5. Top 10 Products by Revenue, Profit & Return Rate  
 
@@ -422,15 +391,13 @@ Technology products account for the majority of top-ranking items.
 
 → Profit and revenue leadership is concentrated within Technology, confirming category dominance.
 
-
 ### IV. Sales Agent 
-
 
 <img width="1000" alt="image" src="https://github.com/user-attachments/assets/54549eaa-4abb-4fdb-8f17-786abc3dcd04" />
 
-# 📌 Key Findings
+### 📌 Key Findings
 
-## 1. Sales Performance Dispersion by Agent
+### 1. Sales Performance Dispersion by Agent
 
 Sales performance varies significantly across agents in both scale and efficiency.
 
@@ -441,9 +408,7 @@ Sales performance varies significantly across agents in both scale and efficienc
 
 > **Insight:** US-based agents function as revenue engines, while Canada and North Asia demonstrate stronger pricing discipline and profitability control.
 
----
-
-## 2. Revenue Growth by Category (Across Sales Agents)
+### 2. Revenue Growth by Category (Across Sales Agents)
 
 All agents sustain strong YoY growth (~50%+).
 
@@ -452,9 +417,7 @@ All agents sustain strong YoY growth (~50%+).
 
 > **Insight:** Product focus differentiates profit leaders from revenue leaders.
 
----
-
-## 3. Overall Sales Efficiency Gap
+### 3. Overall Sales Efficiency Gap
 
 - **Total Revenue:** $12.64M  
 - **Total Profit:** $1.47M  
@@ -464,9 +427,7 @@ Margin dispersion ranges from single-digit levels (some US territories) to ~26% 
 
 > **Insight:** While growth performance is consistent, execution quality and pricing effectiveness vary significantly across agents and regions.
 
----
-
-## 4. Regional Impact on Profitability
+### 4. Regional Impact on Profitability
 
 - **US-West, US-East, US-Central, US-South (Anna, Chuck, etc.)** → High revenue concentration, moderate margin.
 - **Canada (Nicole Hansen)** → Smaller scale, highest efficiency.
@@ -474,9 +435,7 @@ Margin dispersion ranges from single-digit levels (some US territories) to ~26% 
 
 > **Insight:** Focused and less price-sensitive regions demonstrate stronger margin sustainability.
 
----
-
-## 5. Product-Level Profit Drivers by Agent
+### 5. Product-Level Profit Drivers by Agent
 
 - **Phones (~$1.71M revenue)** and **Copiers (~$259K profit)** dominate overall profit contribution.
 - Agents with stronger Technology concentration (**Nicole, Shirley**) outperform in margin.
@@ -485,7 +444,7 @@ Margin dispersion ranges from single-digit levels (some US territories) to ~26% 
 > **Insight:** Technology concentration represents the structural advantage among top-performing profit agents.
 
 
-# 🔎 Final Conclusion & Recommendation  
+## 🔎 Final Conclusion & Recommendation  
 
 | Strategy | Insight | Recommendation |
 |-----------|----------|----------------|
