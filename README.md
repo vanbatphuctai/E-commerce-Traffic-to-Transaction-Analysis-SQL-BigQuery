@@ -279,34 +279,41 @@ This phase is implemented and validated directly within the interactive dashboar
 ### 📌 Key Findings:
 
 #### 1. Total Revenue, Total Profit & Profit Margin  
+
 Revenue reached **$12.64M (+51.5%)** and Profit hit **$1.47M (+52.3%)**, with Orders up **+51.7%**.  
 → Growth was strongly **volume-driven**, while margin slightly improved to **11.61%**.
 
 #### 2. Business Performance Overview by Year  
+
 Revenue & profit increased consistently (2011–2014).  
 Profit margin peaked at **~11.95% (2013)** and remained stable.  
 → Indicates **sustainable scaling with controlled profitability**.
 
 #### 3. Business Performance Overview by Market  
+
 **APAC & EU** led total revenue.  
 **Canada achieved the highest margin (~26.6%)** despite low revenue share.  
 → Large markets drive scale; **Canada shows strongest profitability potential**.
 
 #### 4. Business Performance Overview by Category  
+
 **Technology generated the highest revenue & strong margin (~14%)**.  
 **Furniture recorded the lowest margin (~7%)**.  
 → Technology is the **core profit driver**.
 
 #### 5. Trends in Order & Return Rate  
+
 Orders grew steadily, while **Return Rate declined after 2012 (~4.6%)**.  
 → Growth occurred **without increasing operational risk**.
 
 #### 6. Revenue Growth by Market/Category (YoY%)  
+
 **EMEA (~59.8%) & Africa (~56.5%) showed the highest growth**.  
 US grew slower (~47%) but remains a core base market.  
 → **Emerging markets are accelerating fastest**.
 
 #### 7. Orders, Customers & Return Rate by Category  
+
 **Office Supplies led order volume**.  
 Return rates remained stable (~5–6%).  
 → Volume growth is **healthy and controlled**.
@@ -324,11 +331,11 @@ Total Revenue reached **$12.64M** and Total Profit **$1.47M**.
 **APAC (\~$3.6M), EU (\~$2.9M), and US (\~$2.3M)** led revenue contribution.
 → **Canada recorded the highest profit margin (~26.6%)** despite minimal revenue, while **EMEA showed the weakest margin (~5.5%)**.
 
-#### 2. Revenue vs. Revenue LY (%YoY)
+### 2. Revenue vs. Revenue LY (%YoY)
 
-APAC (~$3.6M), EU (~$2.9M), and US (~$2.3M) led total revenue.  
-**EMEA (+59.8%) and Africa (+56.5%) recorded the highest YoY growth**, while US showed the lowest growth (~46.9%).  
-→ Emerging markets are expanding faster, while large markets remain stable revenue pillars.
+**APAC (\~$3.6M), EU (\~$2.9M), and US (\~$2.3M)** led total revenue.  
+**EMEA (\~+59.8%)** and **Africa (\~+56.5%)** recorded the highest **YoY growth**, while **US (\~46.9%)** showed the lowest growth.  
+→ **Emerging markets** are expanding faster, while **large markets** remain stable revenue pillars.
 
 #### 3. Revenue, Profit Margin & Total Orders by Market
 
@@ -358,38 +365,34 @@ Canada delivered **exceptional margin but lowest total orders (~201)**.
 
 #### 1. Revenue vs. Revenue LY & %YoY by Category  
 
-Technology generated the highest revenue (~$4.8M) and maintained strong YoY growth (~51–52%).  
-Office Supplies showed the highest YoY growth (~52.6%), while Furniture grew slower (~50.4%).  
-
-→ Technology remains the core revenue engine, with all categories sustaining >50% growth.
+**Technology** generated the highest revenue (**\~$4.8M**) and maintained strong **YoY growth (\~51–52%)**.  
+**Office Supplies** showed the highest YoY growth (**\~52.6%**), while **Furniture** grew slower (**\~50.4%**).  
+→ **Technology remains the core revenue engine**, with all categories sustaining **>50% growth**.
 
 #### 2. Total Orders, Total Profit & Revenue by Sub-Category  
 
-Sub-categories with high orders and strong profit cluster in the upper-right quadrant (e.g., Copiers, Phones).  
-Some sub-categories show high order volume but lower profit contribution, indicating margin pressure.  
-
-→ Clear gap between volume-driven and profit-efficient sub-categories.
+Sub-categories with **high orders and strong profit** cluster in the upper-right quadrant (e.g., **Copiers, Phones**).  
+Some sub-categories show **high order volume but lower profit contribution**, indicating **margin pressure**.  
+→ **Clear gap between volume-driven and profit-efficient sub-categories**.
 
 #### 3. Impact of Shipping Mode on Return Volume  
 
-**Standard Class recorded the highest return volume (677 returns)** but maintained a moderate return rate (~4.47%).  
-First Class and Same Day showed slightly higher return rates (~5%).  
+**Standard Class** recorded the highest return volume (**677 returns**) but maintained a moderate **return rate (\~4.47%)**.  
+**First Class** and **Same Day** showed slightly higher return rates (**\~5%**).  
+→ **Faster shipping does not significantly reduce return risk**; **volume drives total returns**.
 
-→ Faster shipping does not significantly reduce return risk; volume drives total returns.
 
 #### 4. Sales Metrics Overview (Revenue / Profit / Return Rate by Sub-Category & Region)  
 
-Binders, Furnishings, and Art show strong revenue concentration in US and EU markets.  
-Revenue distribution varies significantly across regions, with US contributing the largest share in most sub-categories.  
-
-→ Performance heavily depends on geographic demand concentration.
+**Binders, Furnishings, and Art** show strong revenue concentration in **US and EU markets**.  
+Revenue distribution varies significantly across regions, with **US contributing the largest share** in most sub-categories.  
+→ **Performance heavily depends on geographic demand concentration**.
 
 #### 5. Top 10 Products by Revenue, Profit & Return Rate  
 
-Top products (e.g., Apple Smart Phone, Cisco Smart Phone, Motorola Smart Phone) dominate revenue contribution (~$47K–$87K range).  
-Technology products account for the majority of top-ranking items.  
-
-→ Profit and revenue leadership is concentrated within Technology, confirming category dominance.
+Top products (e.g., **Apple Smart Phone, Cisco Smart Phone, Motorola Smart Phone**) dominate revenue contribution (**\~$47K–$87K range**).  
+**Technology products** account for the majority of top-ranking items.  
+→ **Profit and revenue leadership is concentrated within Technology**, confirming **category dominance**.
 
 ### IV. Sales Agent 
 
