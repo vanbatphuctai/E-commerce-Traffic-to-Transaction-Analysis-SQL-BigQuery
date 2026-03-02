@@ -203,7 +203,7 @@ The dataset consists of three relational tables:
 | Overall | Understand the overall business situation: revenue, cost, profit. | - Determine whether the business is performing well or not. <br> - Set long-term strategic direction. |
 | Market | Business performance by geographical market/region. | - Make accurate investment decisions for each market. <br> - Evaluate market suitability. <br> - Forecast risks and opportunities. |
 | Product | Business performance by product line. | - Understand the performance of each product line. <br> - Optimize product portfolio. <br> - Decide whether to develop new products. <br> - Identify products to discontinue. |
-| Sales Channel / Distributor | Performance by distributor and best-selling products within each assigned area. | - Identify which distributors generate the highest revenue. <br> - Evaluate channel management efficiency. <br> - Decide whether to expand or narrow the distribution network. |
+| Sales Agent / Distributor | Performance by distributor and best-selling products within each assigned area. | - Identify which distributors generate the highest revenue. <br> - Evaluate channel management efficiency. <br> - Decide whether to expand or narrow the distribution network. |
 | Customer | - Customer segmentation. <br> - Consumption behavior and trends. <br> - Customer acquisition cost. <br> - Customer lifetime value. <br> - Expansion potential and retention. | - Understand which customer segments create the most value. <br> - Optimize customer acquisition cost. <br> - Forecast growth and risks. |
 | Marketing | Optimize campaigns to attract potential customers. | - Improve conversion rate. |
 
