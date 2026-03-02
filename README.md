@@ -278,7 +278,7 @@ This phase is implemented and validated directly within the interactive dashboar
 
 ### I. Business Overview
 
-<img width="1000" alt="image" src="https://github.com/user-attachments/assets/e2a4dc9f-2b61-44d2-804d-329b18d7def9" />
+<img width="1300" alt="image" src="https://github.com/user-attachments/assets/e2a4dc9f-2b61-44d2-804d-329b18d7def9" />
 
 ### 📌 Key Findings:
 
@@ -325,7 +325,7 @@ Return rates remained stable (~5–6%).
 
 ### II. Market Analysis
 
-<img width="1000" alt="image" src="https://github.com/user-attachments/assets/552a57e8-c730-4812-aeb9-58f0556448d1" />
+<img width="1300" alt="image" src="https://github.com/user-attachments/assets/552a57e8-c730-4812-aeb9-58f0556448d1" />
 
 ### 📌 Key Findings:
 
@@ -363,7 +363,7 @@ Canada delivered **exceptional margin but lowest total orders (~201)**.
 
 ### III. Product Analysis
 
-<img width="1000" alt="image" src="https://github.com/user-attachments/assets/a1975264-8e9c-4e8b-925d-0b22e2e59c86" />
+<img width="1300" alt="image" src="https://github.com/user-attachments/assets/a1975264-8e9c-4e8b-925d-0b22e2e59c86" />
 
 ### 📌 Key Findings:
 
@@ -400,7 +400,7 @@ Top products (e.g., **Apple Smart Phone, Cisco Smart Phone, Motorola Smart Phone
 
 ### IV. Sales Agent 
 
-<img width="1000" alt="image" src="https://github.com/user-attachments/assets/54549eaa-4abb-4fdb-8f17-786abc3dcd04" />
+<img width="1300" alt="image" src="https://github.com/user-attachments/assets/54549eaa-4abb-4fdb-8f17-786abc3dcd04" />
 
 ### 📌 Key Findings
 
