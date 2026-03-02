@@ -251,18 +251,21 @@ Based on the Growth Formula breakdown of each view, brainstorm related dimension
 ### STAGE 3: IDEATE – STRUCTURE IDEA
 
 #### Scorecard Metrics
-Profit | Total Revenue | Profit Margin | Revenue Growth | Profit Growth | AOV
+
+| Metric 1 | Metric 2 | Metric 3 | Metric 4 | Metric 5 | Metric 6 |
+|----------|----------|----------|----------|----------|----------|
+| Profit | Total Revenue | Profit Margin | Revenue Growth | Profit Growth | AOV |
 
 ---
 
 #### Structured Idea Breakdown
 
-| Idea Name | Very Important Information | Important Information | Detailed Information |
+| Idea Name | Very Important Information | Important Information | Detailed Information | Anything Important Missed? |
 |------------|----------------------------|------------------------|----------------------|
-| **View 1 – Business Overview** | Scorecard: Total Sales, Total Profit, Profit Margin, Revenue Growth Rate (%), Total Orders, Return Rate | - Line & Column chart: Total Sales, Total Profit, Profit Margin by Year <br> - Line & Column chart: Total Sales, Total Profit, Profit Margin by Market <br> - Revenue Trend <br> - Bar chart: YoY by Market <br> - Column: Total Orders vs Return Rate by Year | - Top Salesperson by Market (based on Total Sales) <br> - Matrix table: Total Sales, Sales LY, YoY %, Total Profit, Profit Margin, Total Orders, Return Rate (by Market, Country, State, City) |
-| **View 2 – Market Analysis** | Scorecard: Top Market (by revenue & volume) | - Column & Line: Total Sales vs Sales LY, YoY% (Market) <br> - Scatter Plot: Profit vs Sales by Market <br> - Tree Map: Revenue contribution by Market & Region (drill-down) | - Regional breakdown table (Market → Region → Country → City) including Sales, Sales LY, YoY%, Profit, Profit Margin, Orders |
-| **View 3 – Product Analysis** | Scorecard: Top Subcategory (by revenue & volume) | - Column & Line: Total Sales vs Sales LY, YoY% (Product) <br> - Total Sales, Total Profit, Total Orders by Sub-Category | - Stacked Column: Top 10 selling products <br> - Matrix table by Category/Sub-category: Total Sales, Sales LY, YoY%, Total Profit, Profit Margin, Total Orders, Return Rate |
-| **View 4 – Sales Agent** | 2 Scorecards: Total Revenue & Total Profit (with line trend) | - Sales Agent Performance (Scatter: Revenue, Profit Margin, Orders) <br> - Revenue Growth Rate by Sales Agent (parameter by Market & Category) | - Detailed Sales Area Map & Scorecards: Revenue, Profit Margin, Profit, YoY Growth Rate <br> - Sales Agent ranking table showing Revenue & Profit |
+| **View 1 – Business Overview** | Scorecard: Total Sales, Total Profit, Profit Margin, Revenue Growth Rate (%), Total Orders, Return Rate | - Line & Column chart: Total Sales, Total Profit, Profit Margin by Year <br> - Line & Column chart: Total Sales, Total Profit, Profit Margin by Market <br> - Revenue Trend <br> - Bar chart: YoY by Market <br> - Column: Total Orders vs Return Rate by Year | - Top Salesperson by Market (based on Total Sales) <br> - Matrix table: Total Sales, Sales LY, YoY %, Total Profit, Profit Margin, Total Orders, Return Rate (by Market, Country, State, City) |  |
+| **View 2 – Market Analysis** | Scorecard: Top Market (by revenue & volume) | - Column & Line: Total Sales vs Sales LY, YoY% (Market) <br> - Scatter Plot: Profit vs Sales by Market <br> - Tree Map: Revenue contribution by Market & Region (drill-down) | - Regional breakdown table (Market → Region → Country → City) including Sales, Sales LY, YoY%, Profit, Profit Margin, Orders |  |
+| **View 3 – Product Analysis** | Scorecard: Top Subcategory (by revenue & volume) | - Column & Line: Total Sales vs Sales LY, YoY% (Product) <br> - Total Sales, Total Profit, Total Orders by Sub-Category | - Stacked Column: Top 10 selling products <br> - Matrix table by Category/Sub-category: Total Sales, Sales LY, YoY%, Total Profit, Profit Margin, Total Orders, Return Rate |  |
+| **View 4 – Sales Agent** | 2 Scorecards: Total Revenue & Total Profit (with line trend) | - Sales Agent Performance (Scatter: Revenue, Profit Margin, Orders) <br> - Revenue Growth Rate by Sales Agent (parameter by Market & Category) | - Detailed Sales Area Map & Scorecards: Revenue, Profit Margin, Profit, YoY Growth Rate <br> - Sales Agent ranking table showing Revenue & Profit |  |
 
 ### 4️⃣ Prototype and Review
 This phase is implemented and validated directly within the interactive dashboard.
