@@ -19,26 +19,49 @@
 
 ## 📌 Background & Business Context
 
-In today’s **data-driven e-commerce environment**, understanding how users interact with a website is essential for **optimizing conversion rates** and driving **sustainable revenue growth**.
+This project focuses on analyzing **website performance data** for an online retail business operating in the **apparel and lifestyle segment**. The company’s primary revenue channel is its **e-commerce website**, where customers browse products, add items to cart, and complete purchases.
 
-This project analyzes **website performance** and **customer purchasing behavior** using **SQL in Google BigQuery**. By transforming **raw session-level analytics data** into **structured insights**, the project supports **data-informed decision-making** across **marketing, product, and business strategy** functions.
-
----
-
-## 🎯 Key Business Questions
-
-- 📈 Evaluate how **traffic, engagement, and transaction trends** evolve over time to identify growth patterns and performance gaps.
-
-- 💰 Identify **high-performing acquisition channels** that drive the strongest revenue contribution and ROI.
-
-- 👥 Compare **purchaser vs. non-purchaser behavior** to uncover key behavioral drivers influencing conversion.
-
-- 🔄 Analyze the **end-to-end conversion funnel** (product view → add to cart → purchase) to detect drop-offs and optimization opportunities.
-
+The dataset captures detailed **website interaction data**, including **sessions, pageviews, traffic sources, add-to-cart actions, transactions, and revenue**. This enables a structured analysis of **user behavior** and **conversion performance** directly on the website.
 
 ---
 
-## 👥 Target Audience
+### 🎯 Business Objective
+
+The objective is to evaluate how effectively the website converts **traffic into revenue** by analyzing:
+
+- Traffic and engagement trends over time  
+- Bounce rate and acquisition channel quality  
+- Conversion funnel performance (view → cart → purchase)  
+- Revenue per session and per purchasing user  
+- Product-level purchasing behavior  
+
+The goal is to determine whether website traffic translates into **sustainable engagement and sales performance**.
+
+---
+
+### ❓ Key Business Questions
+
+- How do traffic, engagement, and transaction trends evolve over time?  
+- Which acquisition channels generate the highest revenue contribution and ROI?  
+- Where are the major drop-offs in the conversion funnel?  
+- How does purchaser behavior differ from non-purchasers?  
+- Is the website maximizing revenue per session?
+
+---
+
+### ❗ Business Impact
+
+For an e-commerce business, the website is the **core revenue engine**. Without structured performance analysis:
+
+- High bounce rates may remain undetected  
+- Funnel inefficiencies may limit conversion growth  
+- Marketing spend may not align with revenue impact  
+
+This project demonstrates the ability to transform raw behavioral data into **actionable insights**, supporting data-driven optimization of traffic quality, user experience, and conversion performance.
+
+---
+
+### 👥 Target Audience
 
 This analysis is relevant for:
 
@@ -74,7 +97,7 @@ The dataset contains anonymized session-level activity from the Google Merchandi
 
 ---
 
-## 🔎 Project Scope & Analytical Approach
+### 🔎 Project Scope & Analytical Approach
 
 The analysis includes:
 
